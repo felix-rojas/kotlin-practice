@@ -11,4 +11,5 @@ Solving simple kotlin problems.
 Solved so far:
 [Recursive Fibonacci](fibonacciRecursivo.kt)
 [Basic Palindrome Check](isPalindromeBasic.kt)
-[Range Contains Range](rangeContainsRange.kt) 
+[Range Contains Range](rangeContainsRange.kt)
+[Find Rectangle of Zeroes](findRectangle.kt)

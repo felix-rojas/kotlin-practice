@@ -3,14 +3,21 @@ package com.igorwojda.matrix.findrectangle
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
+/* Finds rectangles of zeroes assuming:
+ 1. Everything in between is a zero
+ 2. They are all rectangles
+ 3. There is at least one zero */
+ 
 private fun findRectangle(image: List<List<Int>>): List<Int>? {
-    image.forEach{
-        if (it.indexOf(0)!=-1) {
-            return listOf(image.indexOf(it),  it.indexOf(0), image.lastIndexOf(it), it.lastIndexOf(0))
+    image.forEach{                                                          // for each Row
+        if (it.indexOf(0)!=-1) {                                            // if there are any zeroes
+            return listOf(image.indexOf(it),  it.indexOf(0),                // find first and last zero of first row
+                          image.lastIndexOf(it), it.lastIndexOf(0)) // find first and last zero of last row
         }
     }
     return listOf(0)
 }
+
 
 private class Test {
     @Test
